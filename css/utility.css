@@ -1,0 +1,96 @@
+/* Width Utilities */
+.w-100 {
+  width: 100%;
+}
+
+/* Align Items Utilities */
+
+.items-center {
+  align-items: center;
+}
+
+/* List Style Utilities */
+.list-none {
+  list-style: none;
+}
+
+/* Anchor */
+.text-decoration-none {
+  text-decoration: none;
+}
+
+/* Font size Utilities */
+
+.fs-7 {
+  font-size: 7px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+.fs-22 {
+  font-size: 22px;
+}
+
+.fs-36 {
+  font-size: 36px;
+}
+.fs-72 {
+  font-size: 72px;
+}
+.fs-56 {
+  font-size: 56px;
+}
+
+/* Text color Utilities */
+.text-color-primary {
+  color: #032e15;
+}
+
+.text-light-grey {
+  color: #666666 !important;
+}
+.text-grey {
+  color: #322d2d;
+}
+
+.text-gray-light {
+  color: #b8b8b8;
+}
+
+.text-menu-items {
+  color: #162456 !important;
+}
+
+/* Backround color Utilities */
+.bg-green {
+  background-color: #032e15;
+}
+
+.bg-grey {
+  background-color: #f9f9f9 !important;
+}
+
+/* Position utilities */
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+
+/* Cursor utility */
+.cursor-pointer {
+  cursor: pointer;
+}

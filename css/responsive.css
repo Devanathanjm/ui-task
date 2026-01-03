@@ -1,0 +1,145 @@
+/*  MOBILE RESPONSIVE */
+@media (max-width: 767px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding-left: 16px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+
+  .dropdown.active .dropdown-menu {
+    display: block; 
+  }
+
+  .fs-56 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .fs-72 {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  .fs-22 {
+    font-size: 14px;
+  }
+
+  .fs-16 {
+    font-size: 14px;
+  }
+
+  .stat-text {
+    text-align: left;
+  }
+
+  .banner-section {
+    height: 600px;
+  }
+
+  .stat-number {
+    font-size: 32px;
+  }
+  .stat-text {
+    font-size: 13px;
+  }
+  .banner-bg {
+    height: 90vh;
+  }
+  /* .product-details {
+    padding: 20px;
+  } */
+
+  .product-title {
+    font-size: 24px;
+  }
+
+  .thumbnail-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .gallery-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .gallery-arrow-left {
+    left: 10px;
+  }
+
+  .gallery-arrow-right {
+    right: 10px;
+  }
+
+  .fragrance-options {
+    justify-content: space-between;
+  }
+
+  .fragrance-option label {
+    min-width: 80px;
+    padding: 8px;
+  }
+
+  .included-items {
+    flex-direction: column;
+  }
+}
+
+/* Tablet responsive */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fs-56 {
+    font-size: 44px;
+    line-height: 1.2;
+  }
+
+  .fs-72 {
+    font-size: 56px;
+  }
+
+  .fs-22 {
+    font-size: 18px;
+  }
+
+  .fs-16 {
+    font-size: 15px;
+  }
+  .banner-section {
+    height: 630px;
+  }
+
+  .stat-number {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .thumbnail-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .product-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 575px) {
+  .option-pricing {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  .option-name {
+    font-size: 16px;
+  }
+
+  .price-current {
+    font-size: 18px;
+  }
+}

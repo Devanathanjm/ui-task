@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GTG</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo-white.png" type="image/png" />
+    <link rel="shortcut icon" href="assets/images/logo-white.png" />
+
+    <!-- Font family link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Icons link  -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- AOS CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar section start -->
+    <section class="px-4 px-lg-5 pt-2 position-absolute w-100">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img src="assets/images/logo.svg" alt="logo" />
+          </a>
+
+          <!-- Mobile Right Icons -->
+          <div class="d-flex align-items-center d-lg-none gap-3">
+            <!-- Search Icon -->
+            <button class="btn p-0 cursor-pointer" aria-label="Search">
+              <img
+                src="assets/images/search.svg"
+                alt="search"
+                id="searchIconMobile"
+              />
+            </button>
+
+            <!-- Hamburger -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileOffcanvas"
+              aria-controls="mobileOffcanvas"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="collapse navbar-collapse d-none d-lg-flex">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link text-menu-items me-3" href="#">Home</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link d-flex align-items-center text-menu-items me-3"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Shop
+                  <img
+                    src="assets/images/dropdown.svg"
+                    alt="Toggle dropdown"
+                    class="ms-2"
+                    width="14"
+                    height="14"
+                  />
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                  <li><a class="dropdown-item" href="#">Shop 2</a></li>
+                  <li><a class="dropdown-item" href="#">Shop 3</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-menu-items me-3" href="#">Fragrances</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-menu-items me-3" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-menu-items me-3" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-menu-items me-3" href="#">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Desktop Right -->
+            <div class="d-flex align-items-center gap-3 cursor-pointer">
+              <img
+                src="assets/images/search.svg"
+                alt="search"
+                id="searchIcon"
+              />
+              <button class="btn-gradient px-4">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Search Modal -->
+      <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-top modal-sm">
+          <div class="modal-content">
+            <input
+              type="text"
+              class="form-control search-input"
+              placeholder="Search..."
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Search Modal mobile -->
+      <div
+        class="modal fade"
+        id="searchModalMobile"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-top modal-sm">
+          <div class="modal-content">
+            <input
+              type="text"
+              class="form-control search-input"
+              placeholder="Search..."
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 Right-side Offcanvas -->
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="mobileOffcanvas"
+        aria-labelledby="mobileOffcanvasLabel"
+      >
+        <div class="offcanvas-header">
+          <!-- <h5 class="offcanvas-title" id="mobileOffcanvasLabel">Menu</h5> -->
+          <a class="navbar-brand" href="#">
+            <img src="assets/images/logo.svg" alt="logo" />
+          </a>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column">
+          <ul class="navbar-nav mb-4">
+            <li class="nav-item">
+              <a class="nav-link text-menu-items" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link d-flex align-items-center gap-2 text-menu-items"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Shop
+                <img
+                  src="assets/images/dropdown.svg"
+                  alt="Toggle dropdown"
+                  class="ms-2"
+                  width="14"
+                  height="14"
+                />
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item text-menu-items" href="#">Shop 1</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-menu-items" href="#">Shop 2</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-menu-items" href="#">Shop 3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-menu-items" href="#">Fragrances</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-menu-items" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-menu-items" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-menu-items" href="#">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Shop Now Button -->
+          <button class="btn-gradient w-100 mt-auto">Shop Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!--  Navbar section end -->
+
+    <!-- Banner section start -->
+    <section class="banner-bg px-4 px-lg-5 aos-wrapper">
+      <div class="banner-section d-flex justify-start items-center">
+        <div class="text-white me-auto">
+          <button
+            type="button"
+            class="award-btn mb-4 d-flex"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            <span class="btn-icon me-2">
+              <img src="assets/images/Medal.svg" alt="Medal icon" />
+            </span>
+            <span class="btn-text fs-16 text-start"
+              >Awarded the best perfume in the world</span
+            >
+          </button>
+
+          <h1
+            class="text-color-primary fw-bold fs-56 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Live your best life.
+          </h1>
+          <div
+            class="d-flex mb-4 gap-4 gap-lg-5"
+            data-aos="fade-left"
+            data-aos-delay="400"
+          >
+            <div class="stat-text-banner me-1 me-lg-5">
+              <h2 class="fs-72 fw-bold">10x</h2>
+              <span class="fs-22">power</span>
+            </div>
+            <div class="stat-text-banner me-1 me-lg-5">
+              <h2 class="fs-72 fw-bold">9</h2>
+              <span class="fs-22">ingredients</span>
+            </div>
+            <div class="stat-text-banner">
+              <h2 class="fs-72 fw-bold">20K+</h2>
+              <span class="fs-22">happy customers</span>
+            </div>
+          </div>
+          <button class="btn-gradient">Shop Now</button>
+        </div>
+      </div>
+    </section>
+    <!-- Banner section end -->
+
+    <!-- Highlight section starts -->
+
+    <section class="aos-wrapper py-4 py-lg-5 px-4 px-lg-5">
+      <div class="container-fluid p-0 p-lg-2">
+        <div class="row g-5 py-lg-5 py-3">
+          <!-- Left Column: Image Gallery -->
+          <div class="col-lg-5">
+            <div class="gallery-container">
+              <!-- Main Image Display -->
+              <div class="main-image-wrapper position-relative">
+                <button
+                  class="gallery-arrow gallery-arrow-left"
+                  onclick="changeImage(-1)"
+                >
+                  <img src="assets/images/prev.svg" alt="prev" />
+                </button>
+                <img
+                  id="mainImage"
+                  src="assets/images/slider/slider-1.png"
+                  alt="GTG Perfume"
+                  class="main-image"
+                />
+                <button
+                  class="gallery-arrow gallery-arrow-right"
+                  onclick="changeImage(1)"
+                >
+                  <img src="assets/images/next.svg" alt="Next" />
+                </button>
+
+                <!-- Dots Indicator -->
+                <div class="dots-container">
+                  <span class="dot active" onclick="setImage(0)"></span>
+                  <span class="dot" onclick="setImage(1)"></span>
+                  <span class="dot" onclick="setImage(2)"></span>
+                  <span class="dot" onclick="setImage(3)"></span>
+                </div>
+              </div>
+
+              <!-- Thumbnail Grid -->
+              <div class="thumbnail-grid mt-3">
+                <div class="thumbnail-item active" onclick="setImage(0)">
+                  <img src="assets/images/thumbnail-1.png" alt="Thumbnail 1" />
+                </div>
+                <div class="thumbnail-item" onclick="setImage(1)">
+                  <img src="assets/images/thumbnail-2.png" alt="Thumbnail 2" />
+                </div>
+                <div class="thumbnail-item" onclick="setImage(2)">
+                  <img src="assets/images/thumbnail-3.png" alt="Thumbnail 3" />
+                </div>
+                <div class="thumbnail-item" onclick="setImage(3)">
+                  <img src="assets/images/thumbnail-4.png" alt="Thumbnail 4" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Product Details -->
+          <div class="col-lg-7">
+            <div class="product-details">
+              <h1
+                class="text-color-primary fw-semibold fs-36"
+                data-aos="fade-left"
+                data-aos-delay="400"
+              >
+                GTG Perfumes
+              </h1>
+              <div class="rating-container mb-3">
+                <span class="stars">★★★★★</span>
+                <span class="fs-13 text-color-primary">4.7 (999+ reviews)</span>
+              </div>
+              <p class="fs-16 text-color-primary">
+                Experience the timeless allure backed by modern artistry,
+                captured in every bottle of our fragrance. Crafted for those who
+                seek to elevate their essence with purpose and sophistication.
+              </p>
+
+              <!-- Most Popular Badge -->
+
+              <!-- Purchase Type Options -->
+              <div class="purchase-options mt-4">
+                <!-- Single Subscription -->
+
+                <div class="accordion" id="singleDescriptionAccordion">
+                  <div class="accordion-item border-2 rounded show">
+                    <h2 class="accordion-header" id="headingSingleDescription">
+                      <button
+                        class="accordion-button collapsed fw-semibold badge-most-popular text-white text-center d-block"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#singleDescription"
+                        aria-expanded="false"
+                        aria-controls="singleDescription"
+                      >
+                        Most Popular
+                      </button>
+                    </h2>
+
+                    <div
+                      id="singleDescription"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingSingleDescription"
+                      data-bs-parent="#singleDescriptionAccordion"
+                    >
+                      <div class="accordion-body p-0">
+                        <div class="option-header p-3">
+                          <input
+                            type="radio"
+                            name="purchaseType"
+                            id="singleSub"
+                            value="single"
+                            checked
+                          />
+                          <label
+                            for="singleSub"
+                            class="option-label d-flex justify-content-between align-items-center flex-wrap"
+                          >
+                            <span
+                              class="option-name fs-20 text-color-primary fw-medium"
+                            >
+                              Single Subscription
+                            </span>
+                            <span
+                              class="option-pricing fs-20 text-color-primary fw-semibold"
+                            >
+                              <span class="price-current">$99.99</span>
+                              <span
+                                class="price-old fw-normal text-gray-light text-decoration-line-through"
+                                >$146</span
+                              >
+                            </span>
+                          </label>
+                        </div>
+
+                        <div
+                          class="option-details px-3 pb-3"
+                          id="singleSubDetails"
+                        >
+                          <!-- Fragrance Selection -->
+                          <div class="fragrance-section mt-3">
+                            <h6 class="fw-normal fs-16 text-color-primary mb-4">
+                              Choose a Fragrance
+                            </h6>
+
+                            <div class="row g-3">
+                              <div class="col-md-4 col-lg-3">
+                                <div
+                                  class="card bg-grey border-0 rounded-0 position-relative h-100"
+                                >
+                                  <span
+                                    class="badge-bestseller position-absolute"
+                                    >BEST-SELLER</span
+                                  >
+                                  <div class="card-body text-center">
+                                    <div class="d-flex gap-2">
+                                      <input
+                                        type="radio"
+                                        name="fragrance"
+                                        id="original"
+                                      />
+                                      <label
+                                        for="original"
+                                        class="fs-13 d-block"
+                                      >
+                                        Original
+                                      </label>
+                                    </div>
+                                    <img
+                                      src="assets/images/original.png"
+                                      alt="Original"
+                                      class="img-fluid mt-3"
+                                      loading="lazy"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-md-4 col-lg-3">
+                                <div
+                                  class="card bg-grey border-0 rounded-0 h-100"
+                                >
+                                  <div class="card-body text-center">
+                                    <div class="d-flex gap-2">
+                                      <input
+                                        type="radio"
+                                        name="fragrance"
+                                        id="lily"
+                                      />
+                                      <label for="lily" class="fs-13 d-block"
+                                        >Lily</label
+                                      >
+                                    </div>
+                                    <img
+                                      src="assets/images/lily.png"
+                                      alt="Lily"
+                                      class="img-fluid mt-3"
+                                      loading="lazy"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-md-4 col-lg-3">
+                                <div
+                                  class="card bg-grey border-0 rounded-0 h-100"
+                                >
+                                  <div class="card-body text-center">
+                                    <div class="d-flex gap-2">
+                                      <input
+                                        type="radio"
+                                        name="fragrance"
+                                        id="rose"
+                                      />
+                                      <label for="rose" class="fs-13 d-block"
+                                        >Rose</label
+                                      >
+                                    </div>
+                                    <img
+                                      src="assets/images/rose.png"
+                                      alt="Rose"
+                                      class="img-fluid mt-3"
+                                      loading="lazy"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- What's Included -->
+                          <div class="mt-4">
+                            <h6 class="fw-normal fs-16 text-color-primary mb-3">
+                              What's Included:
+                            </h6>
+
+                            <div class="row g-3">
+                              <div class="col-lg-4">
+                                <div class="card border h-100">
+                                  <div class="card-body text-center">
+                                    <span class="text-light-grey"
+                                      >Every 30 Days</span
+                                    >
+                                    <img
+                                      src="assets/images/original-lg.png"
+                                      alt="Original"
+                                      class="img-fluid mt-3"
+                                      loading="lazy"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-lg-8">
+                                <div class="card h-100">
+                                  <div class="card-body">
+                                    <p
+                                      class="mb-4 fw-normal fs-16 text-light-grey"
+                                    >
+                                      One Time
+                                      <b class="text-color-primary">(Free)</b>
+                                    </p>
+                                    <div class="row text-center">
+                                      <div class="col-4">
+                                        <img
+                                          src="assets/images/original.png"
+                                          alt="Original sample"
+                                          class="img-fluid"
+                                          loading="lazy"
+                                        />
+                                      </div>
+                                      <div class="col-4">
+                                        <img
+                                          src="assets/images/lily.png"
+                                          alt="Lily sample"
+                                          class="img-fluid"
+                                          loading="lazy"
+                                        />
+                                      </div>
+                                      <div class="col-4">
+                                        <img
+                                          src="assets/images/rose.png"
+                                          alt="Rose sample"
+                                          class="img-fluid"
+                                          loading="lazy"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Benefits -->
+                            <ul class="benefits-list mt-3">
+                              <li>1 Bottle Shipped Monthly</li>
+                              <li>
+                                <strong>Free</strong> Sampler For Original, Lily
+                                And Rose
+                              </li>
+                              <li><strong>50% OFF</strong> Shipping</li>
+                              <li>
+                                Pause Or Cancel Anytime After 3 Months Minimum
+                              </li>
+                              <li>28 Day Money Back Guarantee*</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- DOUBLE SUBSCRIPTION -->
+                <div
+                  class="accordion-item border-2 rounded border-1 border mt-3"
+                >
+                  <h2 class="accordion-header p-3">
+                    <button
+                      class="accordion-button collapsed fw-semibold bg-white cursor-pointer"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#doubleDescription"
+                      aria-expanded="true"
+                    >
+                      <input
+                        type="radio"
+                        name="purchaseType"
+                        id="doubleSub"
+                        class="me-2 subscription-radio"
+                        style="width: 20px; height: 20px"
+                      />
+                      <label
+                        for="doubleSub"
+                        class="mb-0 w-100 d-flex justify-content-between"
+                      >
+                        <span class="text-color-primary fs-20"
+                          >Double Subscription</span
+                        >
+                        <span class="fw-semibold text-color-primary fs-20"
+                          >$169.99
+                          <del class="text-gray-light fw-normal"
+                            >$146</del
+                          ></span
+                        >
+                      </label>
+                    </button>
+                  </h2>
+
+                  <div
+                    id="doubleDescription"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#subscriptionAccordion"
+                  >
+                    <div class="accordion-body">
+                      <div class="option-details pb-3" id="singleSubDetails">
+                        <!-- Fragrance Selection 1-->
+                        <div class="fragrance-section mt-3">
+                          <h6 class="fw-normal fs-16 text-color-primary mb-4">
+                            Choose a Fragrance 1
+                          </h6>
+
+                          <div class="row g-3">
+                            <div class="col-md-4 col-lg-3">
+                              <div
+                                class="card bg-grey border-0 rounded-0 position-relative h-100"
+                              >
+                                <span class="badge-bestseller position-absolute"
+                                  >BEST-SELLER</span
+                                >
+                                <div class="card-body text-center">
+                                  <div class="d-flex gap-2">
+                                    <input
+                                      type="radio"
+                                      name="fragrance"
+                                      id="original-1"
+                                    />
+                                    <label
+                                      for="original-1"
+                                      class="fs-13 d-block"
+                                    >
+                                      Original
+                                    </label>
+                                  </div>
+                                  <img
+                                    src="assets/images/original.png"
+                                    alt="Original"
+                                    class="img-fluid mt-3"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 col-lg-3">
+                              <div
+                                class="card bg-grey border-0 rounded-0 h-100"
+                              >
+                                <div class="card-body text-center">
+                                  <div class="d-flex gap-2">
+                                    <input
+                                      type="radio"
+                                      name="fragrance"
+                                      id="lily-1"
+                                    />
+                                    <label for="lily-1" class="fs-13 d-block"
+                                      >Lily</label
+                                    >
+                                  </div>
+                                  <img
+                                    src="assets/images/lily.png"
+                                    alt="Lily"
+                                    class="img-fluid mt-3"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 col-lg-3">
+                              <div
+                                class="card bg-grey border-0 rounded-0 h-100"
+                              >
+                                <div class="card-body text-center">
+                                  <div class="d-flex gap-2">
+                                    <input
+                                      type="radio"
+                                      name="fragrance"
+                                      id="rose-1"
+                                    />
+                                    <label for="rose-1" class="fs-13 d-block"
+                                      >Rose</label
+                                    >
+                                  </div>
+                                  <img
+                                    src="assets/images/rose.png"
+                                    alt="Rose"
+                                    class="img-fluid mt-3"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Fragrance Selection 2 -->
+                        <div class="fragrance-section mt-3">
+                          <h6 class="fw-normal fs-16 text-color-primary mb-4">
+                            Choose a Fragrance 2
+                          </h6>
+
+                          <div class="row g-3">
+                            <div class="col-md-4 col-lg-3">
+                              <div
+                                class="card bg-grey border-0 rounded-0 position-relative h-100"
+                              >
+                                <span class="badge-bestseller position-absolute"
+                                  >BEST-SELLER</span
+                                >
+                                <div class="card-body text-center">
+                                  <div class="d-flex gap-2">
+                                    <input
+                                      type="radio"
+                                      name="fragrance"
+                                      id="original-2"
+                                    />
+                                    <label
+                                      for="original-2"
+                                      class="fs-13 d-block"
+                                    >
+                                      Original
+                                    </label>
+                                  </div>
+                                  <img
+                                    src="assets/images/original.png"
+                                    alt="Original"
+                                    class="img-fluid mt-3"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 col-lg-3">
+                              <div
+                                class="card bg-grey border-0 rounded-0 h-100"
+                              >
+                                <div class="card-body text-center">
+                                  <div class="d-flex gap-2">
+                                    <input
+                                      type="radio"
+                                      name="fragrance"
+                                      id="lily-2"
+                                    />
+                                    <label for="lily-2" class="fs-13 d-block"
+                                      >Lily</label
+                                    >
+                                  </div>
+                                  <img
+                                    src="assets/images/lily.png"
+                                    alt="Lily"
+                                    class="img-fluid mt-3"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 col-lg-3">
+                              <div
+                                class="card bg-grey border-0 rounded-0 h-100"
+                              >
+                                <div class="card-body text-center">
+                                  <div class="d-flex gap-2">
+                                    <input
+                                      type="radio"
+                                      name="fragrance"
+                                      id="rose-3"
+                                    />
+                                    <label for="rose-3" class="fs-13 d-block"
+                                      >Rose</label
+                                    >
+                                  </div>
+                                  <img
+                                    src="assets/images/rose.png"
+                                    alt="Rose"
+                                    class="img-fluid mt-3"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- What's Included -->
+                        <div class="mt-4">
+                          <h6 class="fw-normal fs-16 text-color-primary mb-3">
+                            What's Included:
+                          </h6>
+
+                          <div class="row g-3">
+                            <div class="col-lg-4">
+                              <div class="card border h-100">
+                                <div class="card-body text-center">
+                                  <span class="text-light-grey"
+                                    >Every 30 Days</span
+                                  >
+                                  <img
+                                    src="assets/images/original-lg.png"
+                                    alt="Original"
+                                    class="img-fluid mt-3"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-lg-8">
+                              <div class="card h-100">
+                                <div class="card-body">
+                                  <p
+                                    class="mb-4 fw-normal fs-16 text-light-grey"
+                                  >
+                                    One Time
+                                    <b class="text-color-primary">(Free)</b>
+                                  </p>
+                                  <div class="row text-center">
+                                    <div class="col-4">
+                                      <img
+                                        src="assets/images/original.png"
+                                        alt="Original sample"
+                                        class="img-fluid"
+                                        loading="lazy"
+                                      />
+                                    </div>
+                                    <div class="col-4">
+                                      <img
+                                        src="assets/images/lily.png"
+                                        alt="Lily sample"
+                                        class="img-fluid"
+                                        loading="lazy"
+                                      />
+                                    </div>
+                                    <div class="col-4">
+                                      <img
+                                        src="assets/images/rose.png"
+                                        alt="Rose sample"
+                                        class="img-fluid"
+                                        loading="lazy"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Benefits -->
+                          <ul class="benefits-list mt-3">
+                            <li>1 Bottle Shipped Monthly</li>
+                            <li>
+                              <strong>Free</strong> Sampler For Original, Lily
+                              And Rose
+                            </li>
+                            <li><strong>50% OFF</strong> Shipping</li>
+                            <li>
+                              Pause Or Cancel Anytime After 3 Months Minimum
+                            </li>
+                            <li>28 Day Money Back Guarantee*</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Add to Cart Button -->
+                <div class="mt-5">
+                  <a
+                    href="#"
+                    id="addToCartBtn"
+                    class="btn-gradient text-decoration-none w-100 d-block text-center"
+                    >Add to Cart</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlight section ends -->
+
+    <!-- Our collection section starts -->
+    <section class="py-5 px-4 px-lg-5 aos-wrapper">
+      <div class="container-fluid">
+        <div class="row align-items-center g-4">
+          <!-- LEFT: Accordion -->
+          <div class="col-lg-6 col-md-6">
+            <h2
+              class="fw-semibold text-color-primary fs-36 mb-4"
+              data-aos="fade-right"
+              data-aos-delay="500"
+            >
+              Our Collection
+            </h2>
+            <!-- Item One -->
+            <div class="accordion custom-accordion" id="collectionAccordion">
+              <div class="accordion-item mb-3 border-2">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed custom-accordion-btn fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#itemOne"
+                    aria-expanded="false"
+                  >
+                    Signature Scents
+                  </button>
+                </h2>
+                <div
+                  id="itemOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#collectionAccordion"
+                >
+                  <div class="accordion-body text-muted">
+                    Discover our curated line of signature perfumes.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Item Two -->
+            <div class="accordion custom-accordion" id="collectionAccordion">
+              <div class="accordion-item mb-3 border-2">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed custom-accordion-btn fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#itemTwo"
+                    aria-expanded="false"
+                  >
+                    Signature Scents
+                  </button>
+                </h2>
+                <div
+                  id="itemTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#collectionAccordion"
+                >
+                  <div class="accordion-body text-muted">
+                    Discover our curated line of signature perfumes.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item Three -->
+            <div class="accordion custom-accordion" id="collectionAccordion">
+              <div class="accordion-item mb-3 border-2">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed custom-accordion-btn fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#itemThree"
+                    aria-expanded="false"
+                  >
+                    Signature Scents
+                  </button>
+                </h2>
+                <div
+                  id="itemThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#collectionAccordion"
+                >
+                  <div class="accordion-body text-muted">
+                    Discover our curated line of signature perfumes.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item Four -->
+            <div class="accordion custom-accordion" id="collectionAccordion">
+              <div class="accordion-item mb-3 border-2">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed custom-accordion-btn fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#itemFour"
+                    aria-expanded="false"
+                  >
+                    Signature Scents
+                  </button>
+                </h2>
+                <div
+                  id="itemFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#collectionAccordion"
+                >
+                  <div class="accordion-body text-muted">
+                    Discover our curated line of signature perfumes.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Image -->
+          <div class="col-lg-6 text-center col-md-6">
+            <img
+              src="assets/images/collection.png"
+              alt="Perfume"
+              class="img-fluid rounded-4 ms-auto"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our collection section ends -->
+
+    <!-- Stats section start -->
+    <section class="stats-section py-5 aos-wrapper">
+      <div class="container">
+        <div class="row text-center gy-5">
+          <div class="col-6 col-md-3">
+            <h2
+              class="stat-number"
+              data-target="84"
+              data-aos="fade-down"
+              data-aos-delay="600"
+            >
+              0%
+            </h2>
+            <p
+              class="stat-text text-center fw-light"
+              data-aos="fade-right"
+              data-aos-delay="500"
+            >
+              Lorem ipsum dolor sit amet,<br class="d-none d-lg-block" />
+              consectetur adipiscing elit
+            </p>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h2
+              class="stat-number"
+              data-target="78"
+              data-aos="fade-down"
+              data-aos-delay="600"
+            >
+              0%
+            </h2>
+            <p
+              class="stat-text text-center fw-light"
+              data-aos="fade-right"
+              data-aos-delay="500"
+            >
+              Lorem ipsum dolor sit amet,<br class="d-none d-lg-block" />
+              consectetur adipiscing elit
+            </p>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h2
+              class="stat-number"
+              data-target="89"
+              data-aos="fade-down"
+              data-aos-delay="600"
+            >
+              0%
+            </h2>
+            <p
+              class="stat-text text-center fw-light"
+              data-aos="fade-right"
+              data-aos-delay="500"
+            >
+              Lorem ipsum dolor sit amet,<br class="d-none d-lg-block" />
+              consectetur adipiscing elit
+            </p>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h2
+              class="stat-number"
+              data-target="90"
+              data-aos="fade-down"
+              data-aos-delay="600"
+            >
+              0%
+            </h2>
+            <p
+              class="stat-text text-center fw-light"
+              data-aos="fade-right"
+              data-aos-delay="500"
+            >
+              Lorem ipsum dolor sit amet,<br class="d-none d-lg-block" />
+              consectetur adipiscing elit
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Stats section end -->
+
+    <!-- Comparison Table section start   -->
+    <section class="py-4 py-lg-5 px-4 px-lg-5 aos-wrapper">
+      <div class="container-fluid py-4 py-lg-5">
+        <!-- Heading -->
+        <div class="text-center mb-5">
+          <span class="d-block mb-2 text-color-primary fw-bold">---</span>
+          <h2
+            class="fw-semibold text-color-primary fs-36 mt-4"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+          >
+            Why GTG is the #1 Choice
+          </h2>
+        </div>
+
+        <!-- Table wrapper -->
+        <div class="table-responsive pt-4">
+          <table class="table align-middle comparison-table text-center">
+            <thead>
+              <tr>
+                <th class="text-start align-middle fs-16 text-grey">
+                  Qualities
+                </th>
+                <th class="gtg-col">
+                  <img
+                    src="assets/images/thumbnail-2.png"
+                    class="rounded mb-2 mx-auto"
+                    alt="thumbnail"
+                    loading="lazy"
+                  />
+                  <div class="fs-20 text-dark fw-normal mb-3">GTG</div>
+                </th>
+                <th>
+                  <img
+                    src="assets/images/thumbnail-1.png"
+                    class="rounded mb-3 mx-auto"
+                    alt="thumbnail"
+                    loading="lazy"
+                  />
+                  <div class="fs-12 fw-normal text-light-grey mb-3">Arose</div>
+                </th>
+                <th>
+                  <img
+                    src="assets/images/thumbnail-3.png"
+                    class="rounded mb-3 mx-auto"
+                    alt="thumbnail"
+                    loading="lazy"
+                  />
+                  <div class="fs-12 fw-normal text-light-grey mb-3">Bella</div>
+                </th>
+                <th>
+                  <img
+                    src="assets/images/thumbnail-4.png"
+                    class="rounded mb-3 mx-auto"
+                    alt="thumbnail"
+                    loading="lazy"
+                  />
+                  <div class="fs-12 fw-normal text-light-grey mb-3">Dishes</div>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="text-start text-light-grey fw-bold py-3">
+                  Potency Concentration
+                </td>
+                <td class="gtg-col text-light-grey fw-normal">10x</td>
+                <td class="text-light-grey fw-normal">1x</td>
+                <td class="text-light-grey fw-normal">1x</td>
+                <td class="text-light-grey fw-normal">10x</td>
+              </tr>
+
+              <tr>
+                <td class="text-start text-light-grey fw-bold py-3">
+                  Longevity
+                </td>
+                <td class="gtg-col"><span class="icon-check">✓</span></td>
+                <td><span class="icon-cross">✕</span></td>
+                <td><span class="icon-cross">✕</span></td>
+                <td><span class="icon-check-outline">✓</span></td>
+              </tr>
+
+              <tr>
+                <td class="text-start text-light-grey fw-bold py-3">Sillage</td>
+                <td class="gtg-col"><span class="icon-check">✓</span></td>
+                <td><span class="icon-cross">✕</span></td>
+                <td><span class="icon-cross">✕</span></td>
+                <td><span class="icon-cross">✕</span></td>
+              </tr>
+
+              <tr>
+                <td class="text-start text-light-grey fw-bold py-3">
+                  Bottle Design Score
+                </td>
+                <td class="gtg-col text-light-grey fw-normal">9</td>
+                <td class="text-light-grey fw-normal">5</td>
+                <td class="text-light-grey fw-normal">6</td>
+                <td class="text-light-grey fw-normal">2</td>
+              </tr>
+
+              <tr>
+                <td class="text-start text-light-grey fw-bold py-3">
+                  Blend and Harmony
+                </td>
+                <td class="gtg-col"><span class="icon-check">✓</span></td>
+                <td><span class="icon-cross">✕</span></td>
+                <td><span class="icon-cross">✕</span></td>
+                <td><span class="icon-cross">✕</span></td>
+              </tr>
+
+              <tr>
+                <td class="text-start text-light-grey fw-bold py-3">
+                  Skin Compatibility
+                </td>
+                <td class="gtg-col"><span class="icon-check">✓</span></td>
+                <td><span class="icon-cross">✕</span></td>
+                <td><span class="icon-cross">✕</span></td>
+                <td><span class="icon-cross">✕</span></td>
+              </tr>
+
+              <tr>
+                <td class="text-start text-light-grey fw-bold py-3">
+                  Scent Profile
+                </td>
+                <td class="gtg-col"><span class="icon-check">✓</span></td>
+                <td><span class="icon-check-outline">✓</span></td>
+                <td><span class="icon-cross">✕</span></td>
+                <td><span class="icon-cross">✕</span></td>
+              </tr>
+
+              <tr>
+                <td class="text-start text-light-grey fw-bold py-3">
+                  Price vs. Quality
+                </td>
+                <td class="gtg-col"><span class="icon-check">✓</span></td>
+                <td><span class="icon-check-outline">✓</span></td>
+                <td><span class="icon-cross">✕</span></td>
+                <td><span class="icon-check-outline">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-5">
+          <button class="btn-gradient">Try It Risk-Free</button>
+        </div>
+      </div>
+    </section>
+    <!-- Comparison Table section end  -->
+
+    <!-- Footer section start  -->
+    <footer class="bg-green text-light py-5 px-3 px-lg-5">
+      <div class="container-fluid py-4">
+        <div class="row gy-4">
+          <div>
+            <img
+              src="assets/images/logo-white.png"
+              alt="logo"
+              class="footer-logo"
+            />
+          </div>
+          <!-- Logo & Links -->
+          <div class="col-lg-4 col-md-6">
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a href="#" class="text-light text-decoration-none">Home</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-light text-decoration-none">Shop</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-light text-decoration-none"
+                      >Fragrances</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a href="#" class="text-light text-decoration-none"
+                      >About Us</a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-light text-decoration-none">Blog</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-light text-decoration-none"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="col-lg-3 col-md-6">
+            <ul class="list-unstyled">
+              <li class="mb-3 d-flex align-items-center gap-3">
+                <i class="bi bi-facebook"></i> Facebook
+              </li>
+              <li class="mb-3 d-flex align-items-center gap-3">
+                <i class="bi bi-instagram"></i> Instagram
+              </li>
+              <li class="mb-3 d-flex align-items-center gap-3">
+                <i class="bi bi-twitter-x"></i> X
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-lg-5">
+            <p class="fw-semibold mb-3">
+              Join our newsletter to stay up to date on features and releases.
+            </p>
+
+            <form class="d-flex flex-column flex-sm-row gap-2">
+              <input
+                type="email"
+                class="form-control bg-transparent text-light border-light rounded-0 subscribe-field"
+                placeholder="Enter your email"
+              />
+              <button type="submit" class="btn btn-subscribe fw-semibold px-4">
+                Subscribe
+              </button>
+            </form>
+
+            <small class="d-block mt-2 text-light opacity-75">
+              By subscribing you agree to with our
+              <a href="#" class="text-light text-decoration-underline"
+                >Privacy Policy</a
+              >
+              and provide consent to receive updates from our company.
+            </small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section end  -->
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Bootstrap JS  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript link -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
